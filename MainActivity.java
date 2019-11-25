@@ -7,11 +7,13 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.DividerItemDecoration;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.SearchView;
 import android.widget.Toast;
@@ -29,18 +31,79 @@ public class MainActivity extends AppCompatActivity {
     MenuItem search;
     SearchView searchView;
     Button btnDelivery;
-    ImageButton btn1;
+    ImageButton btnAnything, btnCourier, btnBienEtre, btnBienBio, btnChhouittoLamima, btnMarche, btnEnvieDeManger;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btnDelivery = (Button)findViewById(R.id.btnDelivery); 
-        btn1 = (ImageButton)findViewById(R.id.btn1);
+        btnDelivery = (Button)findViewById(R.id.btnDelivery);
+        btnAnything = (ImageButton)findViewById(R.id.btnAnything);
+
+        btnCourier = (ImageButton) findViewById(R.id.btnCourier);
+        btnBienEtre = (ImageButton) findViewById(R.id.btnBienEtre);
+        btnBienBio = (ImageButton) findViewById(R.id.btnBienBio);
+
+        btnChhouittoLamima = (ImageButton) findViewById(R.id.btnChhouittoLamima);
+        btnMarche = (ImageButton) findViewById(R.id.btnMarche);
+        btnEnvieDeManger = (ImageButton) findViewById(R.id.btnEnvieDeManger);
+
+
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-        btn1.setOnClickListener(new View.OnClickListener() {
+        //center button = btnAnything
+        btnAnything.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Button1", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "btnAnything", Toast.LENGTH_SHORT).show();
+                Log.i("My Button = ","btnAnything");
+            }
+        });
+
+        btnCourier.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "btnCourier", Toast.LENGTH_SHORT).show();
+                Log.i("My Button = ","btnCourier");
+            }
+        });
+
+        btnBienEtre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "btnBienEtre", Toast.LENGTH_SHORT).show();
+                Log.i("My Button = ","btnBienEtre");
+            }
+        });
+
+        btnBienBio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "btnBienBio", Toast.LENGTH_SHORT).show();
+                Log.i("My Button = ","btnBienBio");
+            }
+        });
+
+        btnChhouittoLamima.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "btnChhouittoLamima", Toast.LENGTH_SHORT).show();
+                Log.i("My Button = ","btnChhouittoLamima");
+            }
+        });
+
+        btnMarche.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "btnMarche", Toast.LENGTH_SHORT).show();
+                Log.i("My Button = ","btnMarche");
+            }
+        });
+
+        btnEnvieDeManger.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "btnEnvieDeManger", Toast.LENGTH_SHORT).show();
+                Log.i("My Button = ","btnEnvieDeManger");
             }
         });
         /*fab = (FloatingActionButton)findViewById(R.id.fab);
